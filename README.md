@@ -3,9 +3,9 @@ just some configuration
 
 core 
 
-    --settings.
+    --settings.py
   
-    --urls.
+    --urls.py
   
 home
 
