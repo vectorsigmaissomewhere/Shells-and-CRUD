@@ -2,10 +2,17 @@
 just some configuration 
 
 core 
-  --settings.py
-  --urls.py
+
+  --settings.
+  
+  --urls.
+  
 home
+
   --views.py
+  
   --models.py
+  
   --tests.py
+  
   --utils.py
