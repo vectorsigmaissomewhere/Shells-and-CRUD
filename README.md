@@ -3,16 +3,16 @@ just some configuration
 
 core 
 
-  --settings.
+    --settings.
   
-  --urls.
+    --urls.
   
 home
 
-  --views.py
+    --views.py
   
-  --models.py
+    --models.py
   
-  --tests.py
+    --tests.py
   
-  --utils.py
+    --utils.py
