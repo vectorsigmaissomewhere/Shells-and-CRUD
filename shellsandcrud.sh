@@ -148,4 +148,21 @@ TypeError: Car() got an unexpected keyword argument 'car_naem'
 {'car_name': 'Alto', 'speed': 50}
 >>> Car.objects.create(**car_dict)
 <Car: Car object (5)>
->>> 
+>>> cars = Car.objects.all()
+>>> cars
+<QuerySet [<Car: Car object (1)>, <Car: Car object (2)>, <Car: Car object (3)>, <Car: Car object (4)>, <Car: Car object (5)>]>
+
+
+               python3.11 manage.py shell
+anish@Anish:~/Documents/newproject6/core$ python3.11 manage.py shell
+Python 3.11.2 (main, Mar 13 2023, 12:18:29) [GCC 12.2.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> from home.models import *
+>>> cars = Car.objects.all()
+>>> cars
+<QuerySet [<Car: >, <Car: Nexon>, <Car: Xuv 700>, <Car: Renault Kiger>, <Car: Alto>]>
+
+
+
+
