@@ -166,3 +166,53 @@ Type "help", "copyright", "credits" or "license" for more information.
 
 
 
+ for car in cars:
+...     print(f"The car name is {car.car_name} with high speed of {car.speed}")
+... 
+The car name is  with high speed of 50
+The car name is Nexon with high speed of 110
+The car name is Xuv 700 with high speed of 150
+The car name is Renault Kiger with high speed of 80
+The car name is Alto with high speed of 50
+
+
+
+
+
+Updating value
+>>> car = Car.objects.get(id = 1)
+>>> car.car_name = "Creata"
+>>> car.speed = 180
+>>> car.save()
+>>> car
+<Car: Creata>
+>>> Car.objects.all()
+<QuerySet [<Car: Creata>, <Car: Nexon>, <Car: Xuv 700>, <Car: Renault Kiger>, <Car: Alto>]>
+
+
+Directing updating
+Car.objects.all()
+<QuerySet [<Car: Creata>, <Car: Nexon>, <Car: Xuv 700>, <Car: Renault Kiger>, <Car: Alto>]>
+>>> Car.objects.filter(id = 1).update(car_name = "Creta Dark Edition Limited")
+1
+>>> Car.objects.all()
+<QuerySet [<Car: Creta Dark Edition Limited>, <Car: Nexon>, <Car: Xuv 700>, <Car: Renault Kiger>, <Car: Alto>]>
+
+
+
+Deleting value
+
+delete all records 
+Car.objects.all().delete()
+
+
+>>> Car.objects.get(id = 1).delete()
+(1, {'home.Car': 1})
+>>> Car.objects.all()
+<QuerySet [<Car: Nexon>, <Car: Xuv 700>, <Car: Renault Kiger>, <Car: Alto>]>
+>>> 
+
+
+
+
+
